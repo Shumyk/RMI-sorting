@@ -10,9 +10,9 @@ public class RandomIntegersFileCreator {
 	private static final int UPPER_LIMIT = 1000000000;
 	private static int amountOfInstances = 50000;
 	
-	public static void main(String[] args) {
+	public static void initArrayIntegers(String fileName) {
 		
-		File randomInts = new File("/home/shumyk/workspace/CourseWork-Hashchuk/src/main/resources/integersList.txt");
+		File randomInts = new File(fileName);
 		
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(randomInts));
@@ -22,6 +22,7 @@ public class RandomIntegersFileCreator {
 				writer.write(random.nextInt(UPPER_LIMIT) + " ");
 			}
 			writer.close();
+			System.out.println("Array of integers is created.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

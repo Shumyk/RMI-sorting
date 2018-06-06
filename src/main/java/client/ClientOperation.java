@@ -14,13 +14,14 @@ public class ClientOperation implements Task<File>, Serializable{
 
 	private static final long serialVersionUID = -8644449876119311593L;
 	private File fileToSort;
+	private File outputFile;
 	
-	public ClientOperation(File file) {
+	public ClientOperation(File file, File output) {
 		this.fileToSort = file;
+		this.outputFile = output;
 	}
 
 	public File execute() {
-		File outputFile = new File("/home/shumyk/workspace/CourseWork-Hashchuk/src/main/resources/sortedIntegersList.txt");
 		Integer[] intArray;
 		
 		try {
