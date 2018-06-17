@@ -21,6 +21,14 @@ public class ClientOperation implements Task<File>, Serializable{
 		this.outputFile = output;
 	}
 
+	/*
+	 * In this task method consumes file with random sequence of integer and sort them out.
+	 * Result should be send back.
+	 * 
+	 * Here used insert sorting algorithm.
+	 * 
+	 * @see remote.Task#execute()
+	 */
 	public File execute() {
 		Integer[] intArray;
 		

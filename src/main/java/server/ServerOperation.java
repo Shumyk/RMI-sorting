@@ -20,9 +20,7 @@ public class ServerOperation implements RMIInterface {
 
 	@Override
 	public String echo(final String message) throws RemoteException {
-		String messageLocal = message;
-		System.out.println("[message from client] ".concat(messageLocal));
-		
+		System.out.println("[message from client] ".concat(message));
 		return "[response from server] ".concat(message);
 	}
 
